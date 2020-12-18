@@ -44,8 +44,8 @@
                         <input type="hidden" value = "<?php echo $mostrar['id_mask'] ?>" name = "id">
 
                         <td> <button type='submit' Onclick='return ConfirmUpdate()' class='boton_submit' value='Actualizar'> Actualizar</td>
-                        <td><a href='eliminar.php?id=<?php echo $mostrar['id_mask'];?>'> <button type='button' Onclick='return ConfirmDelete()' class='boton_eliminar'>Eliminar</button></a></td>
-                    
+                        <td> <a href='eliminar.php?id=<?php echo $mostrar['id_mask'];?>'> <button type='button' Onclick='return ConfirmDelete()' class='boton_eliminar'>Eliminar</button></a></td>
+                        <td> <button class='boton_cancel'> Cancelar </td>
                         <?php 
                             } mysqli_free_result($result);
 	                    ?>
