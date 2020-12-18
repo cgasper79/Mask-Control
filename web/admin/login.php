@@ -18,7 +18,7 @@
 		<div class='warp'>
 			<form class= 'form_login' method="post" action="comprobarLogin.php">
 				<div class="form-group">
-				<h2>Mask Control 1.0</h2>
+				<h2>Mask Control</h2>
 				</div>
 				<div class="form-group">
 				<input type="text" name="email" class="form-input" placeholder="Email"/>
