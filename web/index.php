@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mask Control</title>
     <link rel="apple-touch-icon" href="../img/favicon.png" />
-    <link  rel="icon" href="./img/favicon.png" type="image/png" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
@@ -52,7 +52,13 @@
                                   echo date_format($date,'d-m-Y');
                             ?>
                         </td>
-                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'><?php echo $mostrar['wash_max'] ?></td>
+                        <td> <div class="lavados"> 
+                                <a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'>
+                                    <?php echo $mostrar['wash_max'] ?>
+                                </a>
+                             </div>
+                             
+                        </td>
                          
                     </tr>
                          
