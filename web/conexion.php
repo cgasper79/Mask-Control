@@ -1,9 +1,10 @@
 <?php 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$servername = '192.168.1.110';
-$username = 'user_db';
-$database = 'mask_db';
-$password = 'pass_user_db';
+$servername = $url["host"];
+$username = $url["user"];
+$database = substr($url["path"], 1);
+$password = $url["pass"];
 
 
 session_start();

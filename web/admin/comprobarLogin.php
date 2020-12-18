@@ -4,10 +4,12 @@
 	header("Pragma: no-cache");
 	header('Content-Type: text/html; charset=UTF-8');
 
-	$servername = '192.168.1.110';
-	$username = 'cristian';
-	$database = 'mask_db';
-	$password = 'gascoing1979';
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$servername = $url["host"];
+	$username = $url["user"];
+	$database = substr($url["path"], 1);
+	$password = $url["pass"];
 
 	$conn = mysqli_connect( $servername, $username, $password, $database );
 	if ( !$conn ) {
