@@ -1,9 +1,9 @@
 <?php 
 
-$servername = 'minimaldance.com';
-$username = 'minimald_mask';
-$database = 'minimald_mask_db';
-$password = 'gascoing1979';
+$servername = 'localhost';
+$username = 'user';
+$database = 'databasedb';
+$password = 'pass';
 
 
 session_start();
