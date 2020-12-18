@@ -1,8 +1,8 @@
 <?php 
 
-$servername = 'localhost;
-$username = 'cristian';
-$database = 'mask_db';
+$servername = 'minimaldance.com';
+$username = 'minimald_mask';
+$database = 'minimald_mask_db';
 $password = 'gascoing1979';
 
 

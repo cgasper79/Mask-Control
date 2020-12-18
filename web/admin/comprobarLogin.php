@@ -4,9 +4,9 @@
 	header("Pragma: no-cache");
 	header('Content-Type: text/html; charset=UTF-8');
 
-	$servername = '192.168.1.110';
-	$username = 'cristian';
-	$database = 'mask_db';
+	$servername = 'minimaldance.com';
+	$username = 'minimald_mask';
+	$database = 'minimald_mask_db';
 	$password = 'gascoing1979';
 
 	$conn = mysqli_connect( $servername, $username, $password, $database );
