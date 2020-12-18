@@ -1,6 +1,6 @@
 <?php 
 
-$servername = '192.168.1.110';
+$servername = 'localhost;
 $username = 'cristian';
 $database = 'mask_db';
 $password = 'gascoing1979';
