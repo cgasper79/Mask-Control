@@ -4,10 +4,10 @@
 	header("Pragma: no-cache");
 	header('Content-Type: text/html; charset=UTF-8');
 
-	$servername = 'localhost';
-	$username = 'user';
-	$database = 'databasedb';
-	$password = 'pass';
+	$servername = getenv (HOST);
+	$username = getenv (USER_DB);
+	$database = getenv (DATABASE);
+	$password = getenv (PASSWORD_USER_DB);
 
 	$conn = mysqli_connect( $servername, $username, $password, $database );
 	if ( !$conn ) {

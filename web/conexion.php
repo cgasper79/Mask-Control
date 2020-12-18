@@ -1,9 +1,9 @@
 <?php 
 
-$servername = 'localhost';
-$username = 'user';
-$database = 'databasedb';
-$password = 'pass';
+$servername = getenv (HOST);
+$username = getenv (USER_DB);
+$database = getenv (DATABASE);
+$password = getenv (PASSWORD_USER_DB);
 
 
 session_start();

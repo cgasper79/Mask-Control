@@ -9,7 +9,8 @@
 <html>
 	<head>
 		<title>Mask Control V1.0</title>
-		<link  rel="icon" href="../img/favicon.png" type="image/png" />
+		<link rel="apple-touch-icon" href="../img/favicon.png" />
+		<link rel="icon" href="../img/favicon.png" type="image/png" />
 		<link rel="stylesheet" href="../css/estilos.css">
 	</head>
 
