@@ -1,9 +1,9 @@
 <?php 
 
 $servername = '192.168.1.110';
-$username = 'user_db';
+$username = 'cristian';
 $database = 'mask_db';
-$password = 'pass_user_db';
+$password = 'gascoing1979';
 
 
 session_start();
