@@ -1,9 +1,11 @@
 <?php 
 
-$servername = getenv (HOST);
-$username = getenv (USER_DB);
-$database = getenv (DATABASE);
-$password = getenv (PASSWORD_USER_DB);
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$servername = $url["host"];
+$username = $url["user"];
+$database = substr($url["path"], 1);
+$password = $url["pass"];
 
 
 session_start();
