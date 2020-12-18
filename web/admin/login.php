@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<title>Mask Control V1.0</title>
-		<link type="image/png" rel=”shortcut icon” href=”favicon.ico”>
+		<link rel=”shortcut icon” type="image/png"  href=”../img/favicon.png”>
 		<link rel="stylesheet" href="../css/estilos.css">
 	</head>
 
