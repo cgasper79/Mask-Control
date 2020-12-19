@@ -8,42 +8,40 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mascarillas</title>
-
-    <link rel="stylesheet" href="./css/estilos.css">
+    <?php
+        require_once ('header.php');
+    ?>  
 </head>
+
 <body>
     <?php
         require_once ('menu.php');
     ?>  
-
-    <div class="container">
-        <table class="table">
-            <caption>Introduce los datos</caption>
-            
-                <tr>
-                    <form action = "nuevo.php" method = "POST">
-                    <th>Descripción</th>
-                        <td><input type="text" value = "" name = "descripcion" placeholder="Breve descripción"></td>
-                    <th>Fecha primer uso</th>
-                        <td><input type="text" value = "" name = "fecha" onkeyup="mascara(this,'-',patron,true)" placeholder="dd-mm-YYYY"></td>
-                    <th>Lavados Máximos</th>
-                        <td><input type="text" value = "" name = "lavados" placeholder="Valor de 1 a 999"></td>            
-                        <td><button type='submit' Onclick='return ConfirmAdd()' class='boton_submit' > Insertar </td>
-                        <td></td>
-                </tr>
-                    </form> 
-        </table>
+    <div class="container-fluid">
+        <h2>Introduce los datos</h2>
+        <div class='form-group'>
+            <form action = "nuevo.php" method = "POST">
+                <label>Descripción</label>
+                <p><input type="text" value = "" name = "descripcion" placeholder="Breve descripción"></p>
+                <label>Fecha primer uso</label>
+                <p><input type="text" value = "" name = "fecha" onkeyup="mascara(this,'-',patron,true)" placeholder="dd-mm-YYYY"></p>
+                <label>Lavados Máximos</label>
+                <p><input type="text" value = "" name = "lavados" placeholder="Valor de 1 a 999"></p>            
+                <button type='submit' Onclick='return ConfirmAdd()' class='btn btn-primary btn-block btn-lg' > Insertar </button>  
+                <a href='index.php'> <button type='button' class="btn btn-light btn-block btn-lg"> Cancelar </button></a>      
+            </form> 
+        </div>
     </div>
-    <script src="./js/codigo.js"></script>  
+    
+  
 </body>
 
-<<footer>
-    <?php
-        require_once ('footer.php');
-    ?>  
-</footer>
+<div class="container-fluid p-3 my-3 bg-primary text-white">
+    <footer>
+        <?php
+            require_once ('footer.php');
+        ?>  
+    </footer>
+</div>
+
 </html>

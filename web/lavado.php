@@ -10,7 +10,7 @@
 
 
     if ($wash < 0){
-        echo 'Esta mascarilla ya no tiene más lavados';
+        #echo 'Esta mascarilla ya no tiene más lavados';
     }
     else {
         mysqli_query($conexion,$sql);

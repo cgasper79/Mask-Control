@@ -9,74 +9,60 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mask Control</title>
-    <link rel="apple-touch-icon" href="../img/favicon.png" />
-    <link rel="icon" href="./img/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="./css/estilos.css">
+    <?php
+        require_once ('header.php');
+    ?>  
 </head>
 <body>
     <?php
         require_once ('menu.php');
     ?>  
-
     <div class="container">
-        <table class="table2">
-            <caption>Mis Mascarillas
-                <div id= 'user'>
+        <h1 align="center">Mis Mascarillas</h1>
+        <h6 align="center"><div>
                 <?php 
                     echo ($email);
                 ?>
                 </div> 
-            </caption>
-
-            <thead>
-                <tr>
+        </h6>
+        <a class="nav-link" href='insertar.php'> <button type="button" class="btn btn-primary btn-block">+Añadir</button> </a>
+        <p></p>
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr align="center">
                     <th>Descripción</th>
-                    <th>Fecha primer uso</th>
                     <th>Lavados Restantes</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-
                 <?php 
 		            $result=mysqli_query($conexion,$sql);
 		            while($mostrar=mysqli_fetch_array($result)){  
                 ?>
-                    <tr>
+                    <tr align="center">
 			            <td><a href='edicion.php?id=<?php echo $mostrar['id_mask'];?>'><?php echo $mostrar['description'] ?></td>
-			            <td>
-                            <?php $date = date_create($mostrar['date_ini']);
-                                  echo date_format($date,'d-m-Y');
-                            ?>
-                        </td>
-                        <td> <div class="lavados"> 
+                        <td> 
                                 <a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'>
                                     <?php echo $mostrar['wash_max'] ?>
-                                </a>
-                             </div>
-                             
+                                </a>  
                         </td>
-                         
+                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary btn-block">Lavar</button></td>
                     </tr>
                          
                 <?php 
                        }
 	            ?>
-
-                
             </tbody>
-            
         </table>
     </div>
-    <script src="./js/codigo.js"></script> 
 </body>
 
-<footer>
-    <?php
-        require_once ('footer.php');
-    ?>  
-</footer>
+<div class="container-fluid p-3 my-3 bg-primary text-white">
+    <footer>
+        <?php
+            require_once ('footer.php');
+        ?>  
+    </footer>
+</div>
 </html>

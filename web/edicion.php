@@ -9,11 +9,9 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mascarillas</title>
-    <link rel="stylesheet" href="./css/estilos.css">
+    <?php
+        require_once ('header.php');
+    ?>  
 </head>
 <body>
 
@@ -21,45 +19,46 @@
         require_once ('menu.php');
     ?>  
 
-    <div class="container">
-        <table class="table">
-            <caption>Edición mascarilla</caption>
-            
-                <?php 
-		            $result=mysqli_query($conexion,$sql);
-		            while($mostrar=mysqli_fetch_array($result)){  
-                ?>
-                    <tr>
-                    <form action = "actualizar.php" method = "POST">
-                    <th class='ficha'>Descripción</th>
-                        <td><input type="text" value = "<?php echo $mostrar['description'] ?>" name = "descripcion"></td>
-                    <th class='ficha'>Fecha primer uso</th>
-                        <td><input type="text" 
-                                    value = "<?php $date = date_create($mostrar['date_ini']);
-                                                            echo date_format($date,'d-m-Y'); ?>" 
+    <div class="container-fluid">
+        <h2>Edición mascarilla</h2>
+        <?php 
+		    $result=mysqli_query($conexion,$sql);
+	        while($mostrar=mysqli_fetch_array($result)){  
+        ?>
+        <div class='form-group'>   
+            <form action = "actualizar.php" method = "POST">
+            <label>Descripción</label>
+            <p><input type="text" value = "<?php echo $mostrar['description'] ?>" name = "descripcion"></p>
+            <label>Fecha primer uso</label>
+            <p><input type="text" 
+                   value = "<?php $date = date_create($mostrar['date_ini']);
+                                  echo date_format($date,'d-m-Y'); ?>" 
                                     name = "fecha">
-                        </td>
-                    <th class='ficha'>Lavados Restantes</th>
-                        <td><input type="text" value = "<?php echo $mostrar['wash_max'] ?>" name = "lavados"></td>
-                        <input type="hidden" value = "<?php echo $mostrar['id_mask'] ?>" name = "id">
-
-                        <td> <button type='submit' Onclick='return ConfirmUpdate()' class='boton_submit' value='Actualizar'> Actualizar</td>
-                        <td> <a href='eliminar.php?id=<?php echo $mostrar['id_mask'];?>'> <button type='button' Onclick='return ConfirmDelete()' class='boton_eliminar'>Eliminar</button></a></td>
-                        <td> <button class='boton_cancel'> Cancelar </td>
-                        <?php 
-                            } mysqli_free_result($result);
-	                    ?>
-                    </tr>
-                    </form>
-            
-        </table>
+            </p>
+            <label class='ficha'>Lavados Restantes</label>
+            <p><input type="text" value = "<?php echo $mostrar['wash_max'] ?>" name = "lavados"></p>
+            <input type="hidden" value = "<?php echo $mostrar['id_mask'] ?>" name = "id">
+            <button type='submit' Onclick='return ConfirmUpdate()' class='btn btn-primary btn-block btn-lg' value='Actualizar'> Actualizar </button>
+            <a href='index.php'> <button type='button' class="btn btn-light btn-block btn-lg"> Cancelar </button></a>
+            <a href='eliminar.php?id=<?php echo $mostrar['id_mask'];?>'> <button type='button' Onclick='return ConfirmDelete()' class="btn btn-danger btn-block btn-lg">Eliminar</button></a>
+        </div>       
+        <?php 
+            } mysqli_free_result($result);
+	    ?>        
+        </form>       
     </div>
-    <script src="./js/codigo.js"></script>  
+    <script src="./js/codigo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
 </body>
 
-<footer>
-    <?php
-        require_once ('footer.php');
-    ?>  
-</footer>
+<div class="container-fluid p-3 my-3 bg-primary text-white">
+    <footer>
+        <?php
+            require_once ('footer.php');
+        ?>  
+    </footer>
+</div>
+
 </html>
