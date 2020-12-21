@@ -47,7 +47,7 @@
                                     <?php echo $mostrar['wash_max'] ?>
                                 </a>  
                         </td>
-                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary btn-block">Lavar</button></a></td> 
+                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary btn-block">Lavar</button></a></td> 
                     </tr>
                          
                 <?php 
