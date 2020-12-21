@@ -6,6 +6,6 @@
     $sql = "DELETE FROM mascarilla WHERE id_mask = '$id' ";  
 
     mysqli_query($conexion,$sql);
-    include ('listado.php');
+    include ('index.php');
 ?>
 
