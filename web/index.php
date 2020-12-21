@@ -25,7 +25,7 @@
                 ?>
                 </div> 
         </h6>
-        <a class="nav-link" href='insertar.php'> <button type="button" class="btn btn-primary btn-block">+Añadir</button> </a>
+        <a class="nav-link" href='insertar.php'> <button type="button" class="btn btn-success btn-block">+Añadir</button> </a>
         <p></p>
         <table class="table table-hover">
             <thead class="thead-light">
