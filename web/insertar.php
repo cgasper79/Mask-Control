@@ -27,7 +27,7 @@
                 <p><input type="text" value = "" name = "fecha" onkeyup="mascara(this,'-',patron,true)" placeholder="dd-mm-YYYY"></p>
                 <label>Lavados Máximos</label>
                 <p><input type="text" value = "" name = "lavados" placeholder="Valor de 1 a 999"></p>            
-                <button type='submit' Onclick='return ConfirmAdd()' class='btn btn-primary btn-block btn-lg' > Insertar </button>  
+                <button type='submit' Onclick='return ConfirmAdd()' class='btn btn-success btn-block btn-lg' > Insertar </button>  
                 <a href='index.php'> <button type='button' class="btn btn-light btn-block btn-lg"> Cancelar </button></a>      
             </form> 
         </div>

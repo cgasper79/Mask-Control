@@ -42,11 +42,7 @@
                 ?>
                     <tr align="center">
 			            <td><a href='edicion.php?id=<?php echo $mostrar['id_mask'];?>'><?php echo $mostrar['description'] ?></td>
-                        <td> 
-                                <a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'>
-                                    <?php echo $mostrar['wash_max'] ?>
-                                </a>  
-                        </td>
+                        <td><?php echo $mostrar['wash_max'] ?></td>
                         <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary btn-block">Lavar</button></a></td> 
                     </tr>
                          

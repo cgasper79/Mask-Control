@@ -38,7 +38,7 @@
             <label class='ficha'>Lavados Restantes</label>
             <p><input type="text" value = "<?php echo $mostrar['wash_max'] ?>" name = "lavados"></p>
             <input type="hidden" value = "<?php echo $mostrar['id_mask'] ?>" name = "id">
-            <button type='submit' Onclick='return ConfirmUpdate()' class='btn btn-primary btn-block btn-lg' value='Actualizar'> Actualizar </button>
+            <button type='submit' Onclick='return ConfirmUpdate()' class='btn btn-success btn-block btn-lg' value='Actualizar'> Actualizar </button>
             <a href='index.php'> <button type='button' class="btn btn-light btn-block btn-lg"> Cancelar </button></a>
             <a href='eliminar.php?id=<?php echo $mostrar['id_mask'];?>'> <button type='button' Onclick='return ConfirmDelete()' class="btn btn-danger btn-block btn-lg">Eliminar</button></a>
         </div>       
