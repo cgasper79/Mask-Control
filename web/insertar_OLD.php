@@ -19,12 +19,13 @@
     ?>  
     <div class="container-fluid">
         <h2>Introduce los datos</h2>
+
         <div class='form-group'>
             <form action = "nuevo.php" method = "POST">
                 <label>Descripción</label>
                 <p><input type="text" value = "" name = "descripcion" placeholder="Breve descripción"></p>
                 <label>Fecha primer uso</label>
-                <p><input type="text" value = "" name = "fecha" onkeyup="mascara(this,'-',patron,true)" placeholder="dd-mm-YYYY"></p>
+                <p><input id="datapick" type="text" value = "" name = "fecha" onkeyup="mascara(this,'-',patron,true)" placeholder="dd-mm-YYYY"></p>
                 <label>Lavados Máximos</label>
                 <p><input type="text" value = "" name = "lavados" placeholder="Valor de 1 a 999"></p>            
                 <button type='submit' Onclick='return ConfirmAdd()' class='btn btn-primary btn-block btn-lg' > Insertar </button>  
