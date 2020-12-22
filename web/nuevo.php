@@ -1,5 +1,5 @@
 <?php 
-    include ('conexion.php');
+    include ('./includes/conexion.php');
 
     $descripcion = $_POST ['descripcion'];
     $fecha = date_create($_POST ['fecha']);

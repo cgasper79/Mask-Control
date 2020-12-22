@@ -1,6 +1,6 @@
 
 <?php 
-    include ('conexion.php');
+    include ('./includes/conexion.php');
     $email = $_SESSION [ "email" ];
     $id = '15';
     $sql = "SELECT * FROM mascarilla WHERE id_mask = $id "; 

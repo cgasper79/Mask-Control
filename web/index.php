@@ -1,5 +1,5 @@
 <?php 
-    include ('conexion.php');
+    include ('./includes/conexion.php');
     $email = $_SESSION [ "email" ];
     $sql="SELECT * from mascarilla WHERE user = '$email' ORDER BY wash_max ASC";
     
@@ -10,13 +10,13 @@
 
 <head>
     <?php
-        require_once ('header.php');
+        require_once ('./includes/header.php');
     ?>  
 </head>
 
 <body>
     <?php
-        require_once ('menu.php');
+        require_once ('./includes/menu.php');
     ?>  
     <div class="container-fluid" style="margin-top:80px">
         <h1 align="center">Mis Mascarillas</h1>
@@ -45,7 +45,8 @@
                     <tr align="center">
 			            <td><a data-toggle="modal" data-target="#edicion" href='edicion.php?id=<?php echo $mostrar['id_mask'];?>'><?php echo $mostrar['description'] ?></a></td>
                         <td><?php echo $mostrar['wash_max'] ?></td>
-                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary">Lavar</button></td> 
+                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary">Lavar</button></a></td> 
+                        
                     </tr>               
                 <?php 
                        }
@@ -98,7 +99,7 @@
 <div class="container-fluid p-3 my-3 bg-secondary text-white">
     <footer>
         <?php
-            require_once ('footer.php');
+            require_once ('./includes/footer.php');
         ?>  
     </footer>
 </div>
