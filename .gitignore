@@ -33,3 +33,4 @@ Temporary Items
 # Archivo y carpetas a Ingnorar
 conexion.php
 admin/comprobarLogin.php
+web/admin/comprobarLogin.php
