@@ -27,33 +27,34 @@
                 ?>
             </div> 
         </h6>
-        <a class="nav-link" data-toggle="modal" data-target="#nueva"> <button type="button" class="btn btn-primary btn-block">+Añadir</button> </a>
+        <a class="nav-link" data-toggle="modal" data-target="#nueva"> <button type="button" class="btn btn-info">+Añadir</button> </a>
         <p></p>
-        <table class="table table-hover">
-            <thead class="thead-light">
-                <tr align="center">
-                    <th>Descripción</th>
-                    <th>Lavados Restantes</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php 
-		            $result=mysqli_query($conexion,$sql);
-		            while($mostrar=mysqli_fetch_array($result)){  
-                ?>       
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="thead-light">
                     <tr align="center">
-			            <td><a data-toggle="modal" data-target="#edicion" href='edicion.php?id=<?php echo $mostrar['id_mask'];?>'><?php echo $mostrar['description'] ?></a></td>
-                        <td><?php echo $mostrar['wash_max'] ?></td>
-                        <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary">Lavar</button></a></td> 
-                        
-                    </tr>               
-                <?php 
-                       }
-	            ?>
-            </tbody>
-        </table>
-
+                        <th>Descripción</th>
+                        <th>Lavados Restantes</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+		                $result=mysqli_query($conexion,$sql);
+		                while($mostrar=mysqli_fetch_array($result)){  
+                    ?>       
+                        <tr align="center">
+			                <td><a data-toggle="modal" data-target="#edicion" href='edicion.php?id=<?php echo $mostrar['id_mask'];?>'><?php echo $mostrar['description'] ?></a></td>
+                            <td><?php echo $mostrar['wash_max'] ?></td>
+                            <td><a href='lavado.php?id=<?php echo $mostrar['id_mask'];?>&wash=<?php echo $mostrar['wash_max'];?>' Onclick='return ConfirmWash()'><button type="button" class="btn btn-primary">Lavar</button></a>
+                        </td> 
+                        </tr>               
+                    <?php 
+                        }
+	                ?>
+                </tbody>
+            </table>
+        </div>
        <!--Modal Edicion-->
         <div class="modal fade" id="edicion">
             <div class="modal-dialog">
@@ -96,7 +97,7 @@
     </div>
 </body>
 
-<div class="container-fluid p-3 my-3 bg-secondary text-white">
+<div class="container-fluid p-3 my-3 bg-primary text-white">
     <footer>
         <?php
             require_once ('./includes/footer.php');
