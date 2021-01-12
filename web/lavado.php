@@ -1,21 +1,15 @@
 <?php 
     include ('./includes/conexion.php');
 
-    $id = $_GET['id'];
-    $wash = $_GET['wash'];
+    $id = $_POST['id'];
+    $wash_max = $_POST['lavadosMax'];
+    $wash = $_POST['lavados'];
+    $wash_left = $_POST['lavadosLeft'];
 
-    $wash = $wash -1;
-   
-    $sql = "UPDATE mascarilla SET wash_max = $wash WHERE id_mask = $id ";  
+    $sql = "UPDATE mascarilla 
+            SET wash = $wash, wash_left = $wash_left
+            WHERE id_mask = $id ";  
+    
+    echo $result=mysqli_query($conexion,$sql);
 
-
-    if ($wash < 0){
-        #echo 'Esta mascarilla ya no tiene más lavados';
-    }
-    else {
-        mysqli_query($conexion,$sql);
-    }
-
-
-    include ('index.php');
 ?>

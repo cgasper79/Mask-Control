@@ -30,8 +30,4 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/osx
 
-# Archivo y carpetas a Ingnorar
-web/includes/conexion.php
-web/admin/comprobarLogin.php
-web/admin/comprobarLogin.php
-web/includes/conexion.php
+

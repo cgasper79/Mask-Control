@@ -27,14 +27,17 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `mascarilla`
 --
 
+
+
 CREATE TABLE `mascarilla` (
   `id_mask` int(11) NOT NULL,
   `description` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `date_ini` date NOT NULL,
-  `wash_max` int(2) NOT NULL,
-  `user` varchar(100) COLLATE utf8_spanish_ci NOT NULL
+  `wash_max` int(3) NOT NULL,
+  `user` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `wash` int(3) NOT NULL,
+  `wash_left` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
 
 -- --------------------------------------------------------
 
