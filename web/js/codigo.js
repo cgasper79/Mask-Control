@@ -152,6 +152,11 @@ $(document).ready(function(){
     });
   });  
 
+  //Cierre sesión desde Modal
+  $('#cerrarSesion').click(function(){
+    window.location.href = './admin/logout.php';
+  });
+
   //Actualizar datos Edición desde Modal
   $('#actualizaDatos').click(function(){
     id=$('#idMask').val();

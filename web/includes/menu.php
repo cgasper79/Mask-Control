@@ -44,7 +44,7 @@
 
       <!--Modal footer-->
       <div class="modal-footer">
-        <a href= './admin/logout.php'><button type='button' class='btn btn-success btn-block btn-lg' data-dismiss="modal"> Si </button></a>
+        <button type='button' class='btn btn-success btn-block btn-lg' data-dismiss="modal" id="cerrarSesion"> Si </button></a>
       </div>   
                   
     </div>
