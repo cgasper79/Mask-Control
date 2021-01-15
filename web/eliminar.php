@@ -1,11 +1,8 @@
 <?php 
-    include ('conexion.php');
-
-    $id = $_GET['id'];
-
+    include ('./includes/conexion.php');
+    $id = $_POST['id'];
     $sql = "DELETE FROM mascarilla WHERE id_mask = '$id' ";  
 
-    mysqli_query($conexion,$sql);
-    include ('listado.php');
+    echo $result=mysqli_query($conexion,$sql);
 ?>
 
