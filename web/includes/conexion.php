@@ -7,12 +7,6 @@ username = $url["user"];
 $database = substr($url["path"], 1);
 $password = $url["pass"];
 
-
-/*$servername = 'localhost';
-$username = 'cristian';
-$database = 'mask_db';
-$password = 'gascoing1979';
-*/
 session_start();
 //definimos tiempo de sesión en 1 hora
 define( 'MAX_SESSION_TIEMPO', 3600 * 1 );
