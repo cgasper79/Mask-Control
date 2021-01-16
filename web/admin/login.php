@@ -36,14 +36,12 @@
 						<div class="form-group p-3">
 							<label for="uname">Usuario:</label>
 							<input type="text" id="uname" class="form-control" placeholder="Email" name="email" required>
-							<div class="valid-feedback">Válido.</div>
       						<div class="invalid-feedback">Por favor rellena este campo.</div>
 						</div>
 
 						<div class="form-group p-3">
 							<label for="pwd">Contraseña:</label>
 							<input type="password" id="pwd" class="form-control" placeholder="Password" name="password" required>
-				   			<div class="valid-feedback">Válido.</div>
       						<div class="invalid-feedback">Por favor rellena este campo.</div>
 						</div>
 						<div class="p-3" align="center">
@@ -60,7 +58,7 @@
     	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     	<!-- PERSONALIZADOS -->
-    	<script src="./js/codigo.js"></script> 
+    	<script src="../js/codigo.js"></script> 
 
 	</body>
 </html>

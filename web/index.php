@@ -52,6 +52,12 @@
         </div>
     </div>
 
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        <strong>¡Importante!</strong> Recuerda que se debe controlar el número de lavado de todas tus mascarillas para que éstas sean efectivas.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 
     <!-- TABLA -->
     <div class="container">  
@@ -69,7 +75,7 @@
 
     <!--Modal Edicion-->
     <div class="modal fade" id="edicion">
-        <div class="modal-dialog">
+        <div class="modal-dialog was-validated">
             <div class="modal-content">
                 <!--Modal Header-->
                 <div class="modal-header text-white">
@@ -79,22 +85,32 @@
                 <!--Modal Body-->
                 <div class="modal-body">
                     <input type="text" hidden="" id="idMask" name="" >
-                    
-                    <label>Descripción:</label>
-                    <input type="text" name="" id="descripcionU" class="form-control shadow-sm" required>
-                    <br>
-                    <label>Fecha primer uso:</label>
-                        <div class="datepicker date input-group p-0 shadow-sm">
-                            <input type="text" name="" id="fechaIniU" class="form-control shadow-sm" required>
-                            <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
-                        </div>
-                    <br>
-                    <label>Lavados Máximos:</label>
-                    <input type="text" name="" id="lavadosMaxU" class="form-control shadow-sm" required>
-                    <br>
-                    <label>Número lavados:</label>
-                    <input type="text" name="" id="lavados" class="form-control shadow-sm" required>
-                    <br>
+                    <div class="form-group">
+                        <label>Descripción:</label>
+                        <input type="text" name="" id="descripcionU" class="form-control shadow-sm" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha primer uso:</label>
+                            <div class="datepicker date input-group p-0 shadow-sm">
+                                <input type="text" name="" id="fechaIniU" class="form-control shadow-sm" required>
+                                <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
+                                <div class="invalid-feedback">Campo obligatorio</div>
+                            </div>
+                    </div/>
+
+                    <div class="form-group">
+                        <label>Lavados Máximos:</label>
+                        <input type="text" name="" id="lavadosMaxU" class="form-control shadow-sm" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Número lavados:</label>
+                        <input type="text" name="" id="lavados" class="form-control shadow-sm" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
                 </div>
                 <!--Modal Footer-->
                 <div class="modal-footer">
@@ -108,7 +124,8 @@
 
     <!--Modal Nueva mascarilla-->
     <div class="modal fade" id="nueva">
-            <div class="modal-dialog">
+            
+            <div class="modal-dialog was-validated">
                 <div class="modal-content">
                     <!--Modal Header-->
                     <div class="modal-header text-white">
@@ -118,18 +135,26 @@
 
                     <!--Modal Body-->
                     <div class="modal-body">
-                        <label>Descripción:</label>
-                        <input type="text" name="" id="descripcion" class="form-control shadow-sm" placeholder="Breve descripción mascarillas" required>
-                        <br>
-                        <label>Fecha primer uso:</label>
-                        <div class="datepicker date input-group p-0 shadow-sm">
-                            <input type="text" name="" id="fechaIni" class="form-control shadow-sm" placeholder="Elije una fecha" required>
-                            <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
+                        <div class="form-group">
+                            <label>Descripción:</label>
+                            <input type="text" name="" id="descripcion" class="form-control shadow-sm" placeholder="Breve descripción mascarilla" required>
+                            <div class="invalid-feedback">Campo obligatorio</div>
                         </div>
-                        <br>
-                        <label>Lavados Máximos:</label>    
-                        <input type="text" name="" id="lavadosMax" class="form-control shadow-sm" placeholder="1 - 999" required> 
-                        <br>
+
+                        <div class="form-group">
+                            <label>Fecha primer uso:</label>
+                            <div class="datepicker date input-group p-0">
+                                <input type="text" name="" id="fechaIni" class="form-control shadow-sm" placeholder="Elije una fecha" required>
+                                <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
+                                <div class="invalid-feedback">Campo obligatorio</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Lavados Máximos:</label>    
+                            <input type="text" name="" id="lavadosMax" class="form-control shadow-sm" placeholder="1 - 999" required> 
+                            <div class="invalid-feedback">Campo obligatorio</div>
+                        </div>
                     </div>
 
                     <!--Modal footer-->
@@ -138,6 +163,7 @@
                     </div>   
                 </div>             
            </div>
+           
      </div>
 
 
@@ -160,7 +186,7 @@
 <!-- Footer -->
 <footer>
     <div class="container-fluid p-3 my-3 bg-primary text-white text-center shadow-sm">
-        Versión 2.0.0
+        Versión 2.0.1
         <p>
             <a class="text-white fa fa-twitter fa-2x" href= 'https://twitter.com/cgasper79'></a> 
             <a class="text-white fa fa-github fa-2x" href= 'https://github.com/cgasper79/Mask-Control'></a>

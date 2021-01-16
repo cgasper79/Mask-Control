@@ -48,15 +48,6 @@ function ConfirmExit()
        return false;
 }
 
-function info(){
-
-  toastr.options = {
-    "closeButton": true
-  };
-
-  toastr.info('','Recuerda que se debe controlar el número de lavado de todas tus mascarillas para que éstas sean efectivas.');
-  
-}
 
 //Función para agregar datos a Modal Edicion
 function agregarDatos(datos){
@@ -115,19 +106,12 @@ function actualizaLavado(datos){
 }
 
 
-// DataPicker
-  $('.datepicker').datepicker({
-      autoclose: true,
-      weekStart: 1,
-      todayHighlight: true,
-      language: 'es',
-      format: "dd-mm-yyyy"
-  });
-
-
 $(document).ready(function(){
 
-  info();
+  //Toaster Opciones
+  toastr.options = {
+    "closeButton": true
+  };
 
   // DataPicker
   $('.datepicker').datepicker({
@@ -171,23 +155,28 @@ $(document).ready(function(){
            "&lavadosMax=" + lavadosMax +
            "&lavados=" + lavados;
     
-    if ((ConfirmUpdate() == true)){
-      $.ajax({
-        type:"POST" ,
-        url:"./actualizar.php",
-        data:cadena,
-        success: function (r) {
-          if (r==1){
-            $('#tabla').load('tabla.php');
-            toastr.success('Mask Control', 'Tu mascarilla se ha actualizado correctamente');
-          }else{
-            toastr.error('Mask Control', 'Error al actualizar tu mascarilla');
-          }       
-        }
-      }); 
+    if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
+      toastr.warning('Mask Control', 'Rellene todos los campos obligatorios');
     } else {
-      toastr.warning('Mask Control', 'Acción cancelada por usuario');
-    }  
+      if ((ConfirmUpdate() == true)){
+        $.ajax({
+          type:"POST" ,
+          url:"./actualizar.php",
+          data:cadena,
+          success: function (r) {
+            if (r==1){
+              $('#tabla').load('tabla.php');
+              toastr.success('Mask Control', 'Tu mascarilla se ha actualizado correctamente');
+            }else{
+              toastr.error('Mask Control', 'Error al actualizar tu mascarilla, vuelva a intentarlo');
+            }       
+          }
+        }); 
+      } else {
+        toastr.warning('Mask Control', 'Acción cancelada por usuario');
+      }  
+    }
+     
   });    
 
   //Nueva mascarillas desde Modal
@@ -200,25 +189,31 @@ $(document).ready(function(){
            "&fechaIni=" + fechaIni +
            "&lavadosMax=" + lavadosMax ;
       
-      if ((ConfirmAdd() == true)){
-        $.ajax({
-          type:"POST" ,
-          url:"./nuevo.php",
-          data:cadena,
-          success: function (r) {
-            if (r==1){
-              toastr.success('Mask Control', 'Tu mascarilla se ha añadido correctamente');
-              $('#datosUsuario').load('datosUsuario.php');
-              $('#tabla').load('tabla.php');
-              
-            }else{
-              toastr.error('Mask Control', 'Error al añadir mascarilla');
-            }       
-          }
-        });   
-      } else {
-        toastr.warning('Mask Control', 'Acción cancelada por usuario');
-      }  
+      if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
+        toastr.warning('Mask Control', 'Rellene todos los campos obligatorios');
+      } else{
+        if ((ConfirmAdd() == true)){
+          $.ajax({
+            type:"POST" ,
+            url:"./nuevo.php",
+            data:cadena,
+            success: function (r) {
+              if (r==1){
+                toastr.success('Mask Control', 'Tu mascarilla se ha añadido correctamente');
+                $('#datosUsuario').load('datosUsuario.php');
+                $('#tabla').load('tabla.php');
+                
+              }else{
+                toastr.error('Mask Control', 'Error al añadir mascarilla, vuelva a intentarlo');
+              }       
+            }
+          });   
+        } else {
+          toastr.warning('Mask Control', 'Acción cancelada por usuario');
+        }
+      }
+       
+        
     });
 
   //Borrar datos Edición desde Modal
