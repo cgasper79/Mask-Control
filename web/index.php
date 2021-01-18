@@ -53,7 +53,7 @@
     </div>
 
     <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-        <strong>¡Importante!</strong> Recuerda que se debe controlar el número de lavado de todas tus mascarillas para que éstas sean efectivas.
+        <strong>¡Importante!</strong> Recuerda que para que las mascarillas sean efecivas, se debe controlar el número de lavados.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>

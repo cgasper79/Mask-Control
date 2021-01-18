@@ -73,9 +73,8 @@ function actualizaLavado(datos){
   lavadosLeft = d[6];
   lavadosLeft = parseInt(lavadosLeft,10);
   
-  
   if ((lavadosLeft <= 0)){
-    toastr.warning('Mask Control', 'Esta mascarillas no tiene más lavados');
+    toastr.warning('Alerta', 'Esta mascarillas no tiene más lavados');
   }else if ((ConfirmWash() == true)){
 
     lavadosLeft = lavadosMax - lavados;
@@ -84,8 +83,6 @@ function actualizaLavado(datos){
              "&lavadosMax=" + lavadosMax +
              "&lavados=" + lavados +
              "&lavadosLeft=" + lavadosLeft; 
-             
-    console.log(cadena);
     $.ajax({
         type:"POST" ,
         url:"./lavado.php",
@@ -93,25 +90,23 @@ function actualizaLavado(datos){
         success: function (r) {
           if (r==1){
             $('#tabla').load('tabla.php');
-            toastr.success('Mask Control', 'Lavado incluido correctamente');
-            
+            toastr.success('OK', 'Lavado incluido correctamente'); 
           }else{
             toastr.error('Mask Control', 'Error al incluir lavado incluido');
           }       
         }
     });
   } else {
-    toastr.warning('Mask Control', 'Acción cancelada por usuario');
+    toastr.warning('Alerta', 'Acción cancelada por usuario');
   }  
 }
 
+//Toaster Opciones
+toastr.options = {
+  "closeButton": true
+};
 
 $(document).ready(function(){
-
-  //Toaster Opciones
-  toastr.options = {
-    "closeButton": true
-  };
 
   // DataPicker
   $('.datepicker').datepicker({
@@ -156,7 +151,7 @@ $(document).ready(function(){
            "&lavados=" + lavados;
     
     if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
-      toastr.warning('Mask Control', 'Rellene todos los campos obligatorios');
+      toastr.warning('Alerta', 'Rellene todos los campos obligatorios');
     } else {
       if ((ConfirmUpdate() == true)){
         $.ajax({
@@ -166,14 +161,14 @@ $(document).ready(function(){
           success: function (r) {
             if (r==1){
               $('#tabla').load('tabla.php');
-              toastr.success('Mask Control', 'Tu mascarilla se ha actualizado correctamente');
+              toastr.success('OK', 'Tu mascarilla se ha actualizado correctamente');
             }else{
-              toastr.error('Mask Control', 'Error al actualizar tu mascarilla, vuelva a intentarlo');
+              toastr.error('Error', 'Mascarilla ya existe, ponga otra descripción');
             }       
           }
         }); 
       } else {
-        toastr.warning('Mask Control', 'Acción cancelada por usuario');
+        toastr.warning('Cuidado', 'Acción cancelada por usuario');
       }  
     }
      
@@ -188,9 +183,9 @@ $(document).ready(function(){
       cadena="descripcion=" + descripcion +
            "&fechaIni=" + fechaIni +
            "&lavadosMax=" + lavadosMax ;
-      
+  
       if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
-        toastr.warning('Mask Control', 'Rellene todos los campos obligatorios');
+        toastr.warning('Alerta', 'Rellene todos los campos obligatorios');
       } else{
         if ((ConfirmAdd() == true)){
           $.ajax({
@@ -199,21 +194,20 @@ $(document).ready(function(){
             data:cadena,
             success: function (r) {
               if (r==1){
-                toastr.success('Mask Control', 'Tu mascarilla se ha añadido correctamente');
+                toastr.success('OK', 'Tu mascarilla se ha añadido correctamente');
                 $('#datosUsuario').load('datosUsuario.php');
                 $('#tabla').load('tabla.php');
                 
               }else{
-                toastr.error('Mask Control', 'Error al añadir mascarilla, vuelva a intentarlo');
+                toastr.error('Error', 'Mascarilla ya existe, ponga otra descripción');
               }       
             }
           });   
         } else {
-          toastr.warning('Mask Control', 'Acción cancelada por usuario');
+          toastr.warning('Alerta', 'Acción cancelada por usuario');
         }
       }
        
-        
     });
 
   //Borrar datos Edición desde Modal
@@ -232,9 +226,9 @@ $(document).ready(function(){
           if (r==1){
             $('#datosUsuario').load('datosUsuario.php');
             $('#tabla').load('tabla.php');
-            toastr.success('Mask Control', 'Mascarilla eliminada correctamente');
+            toastr.success('OK', 'Mascarilla eliminada correctamente');
           }else{
-            toastr.error('Mask Control', 'Error al borrar mascarilla');
+            toastr.error('Error', 'No se ha borrado la mascarilla');
           }       
         }
       }); 
