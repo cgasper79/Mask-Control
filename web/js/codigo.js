@@ -61,6 +61,21 @@ function agregarDatos(datos){
 }
 
 
+//Función para controlar los campos numéricos
+function controlNumeros(valor,campo){
+  
+  var valorInput = valor;
+  var campoInput = campo;
+  
+  if (isNaN(valorInput)){
+    $(campoInput).val('');
+  } else {
+    if ((valorInput.length)>3){
+      $(campoInput).val('');
+    }   
+  }
+}
+
 //Función para descontar lavados
 function actualizaLavado(datos){
   
@@ -131,6 +146,27 @@ $(document).ready(function(){
     });
   });  
 
+  //control campo Input Lavados Max Nueva
+  $('#lavadosMax').on('keyup', function() {
+    var valorLavadosMax = $(this).val();
+    var campoLavadosMax = '#lavadosMax';
+    controlNumeros(valorLavadosMax,campoLavadosMax );
+  });
+
+  //control campo Input Lavados Max Edición
+  $('#lavadosMaxU').on('keyup', function() {
+    var valorLavadosMaxU = $(this).val();
+    var campoLavadosMaxU = '#lavadosMaxU';
+    controlNumeros(valorLavadosMaxU,campoLavadosMaxU );
+  });
+
+  //Control campo Input Lavados Edición
+  $('#lavados').on('keyup', function() {
+    var valorLavados = $(this).val();
+    var campoLavados = '#lavados';
+    controlNumeros(valorLavados,campoLavados); 
+  });
+
   //Cierre sesión desde Modal
   $('#cerrarSesion').click(function(){
     window.location.href = './admin/logout.php';
@@ -150,9 +186,14 @@ $(document).ready(function(){
            "&lavadosMax=" + lavadosMax +
            "&lavados=" + lavados;
     
-    if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
-      toastr.warning('Alerta', 'Rellene todos los campos obligatorios');
-    } else {
+    if (lavados > lavadosMax){
+      toastr.warning('Alerta', 'El número de lavados no puede ser superior al número de lavados máximos soportado por la mascarilla.');
+    
+    } else 
+      if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
+        toastr.warning('Alerta', 'Rellene todos los campos obligatorios');
+
+    } else 
       if ((ConfirmUpdate() == true)){
         $.ajax({
           type:"POST" ,
@@ -164,16 +205,15 @@ $(document).ready(function(){
               toastr.success('OK', 'Tu mascarilla se ha actualizado correctamente');
             }else{
               toastr.error('Error', 'Mascarilla ya existe, ponga otra descripción');
+              $('#edicion').modal('show');
             }       
           }
         }); 
       } else {
         toastr.warning('Cuidado', 'Acción cancelada por usuario');
       }  
-    }
-     
   });    
-
+  
   //Nueva mascarillas desde Modal
   $('#guardarNueva').click(function(){
       descripcion=$('#descripcion').val();
@@ -186,6 +226,7 @@ $(document).ready(function(){
   
       if ((descripcion === '') || (fechaIni === '') || (lavadosMax === '') ) {
         toastr.warning('Alerta', 'Rellene todos los campos obligatorios');
+        $('#nueva').modal('show');
       } else{
         if ((ConfirmAdd() == true)){
           $.ajax({
@@ -200,6 +241,7 @@ $(document).ready(function(){
                 
               }else{
                 toastr.error('Error', 'Mascarilla ya existe, ponga otra descripción');
+                $('#nueva').modal('show');
               }       
             }
           });   

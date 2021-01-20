@@ -28,7 +28,7 @@
 
 <!--Modal Cierre Sesión-->
 <div class="modal fade" id="sesion">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
       <!--Modal Header-->
