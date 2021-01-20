@@ -10,7 +10,7 @@
     $wash_left = $wash_max - $wash;
 
     $sql = "SELECT * from mascarilla 
-             WHERE description = '$descripcion' ";
+             WHERE description = '$descripcion' AND NOT id_mask = '$id' ";
     $result=mysqli_query($conexion,$sql);
     $repetidos = mysqli_num_rows($result);
 
