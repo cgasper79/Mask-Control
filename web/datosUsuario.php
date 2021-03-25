@@ -8,16 +8,14 @@
 
     //contamos el número de mascarillas usuario
     $sql2="SELECT * from mascarilla
-            WHERE user = '$email'";
-            
-    
+            WHERE user = '$email'";           
     
 ?>
 
 <div class="row">
     <div class="col">
         <br>
-        <h3 class="display-4 ">Mis Mascarillas</h3>
+        <h3 class="display-4 ">Mask Control</h3>
         <p class="lead">
             <?php 
                 $result = mysqli_query($conexion,$sql);

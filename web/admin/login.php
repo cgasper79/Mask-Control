@@ -28,26 +28,33 @@
 		    <div class="row">
 			    <div class="col"></div>
 				<div class="col-lg-4 border shadow p-3 mb-6 bg-white rounded">
-					<h1 align="center">Mask Control</h1>
+					<img src="../img/logo.png"/>
+					<h2 align="center">Mask Control</h2>
 					<div align="center">
       					<img src="../img/favicon.png" id="icon" alt="User Icon" width="25%" height="25%" />
 					</div>
+					<br>
+					<h2 align="center">LOGIN</h2>
 					<form method="post" action="comprobarLogin.php" class="was-validated">			
-						<div class="form-group p-3">
+						<div class="form-group p-1">
 							<label for="uname">Usuario:</label>
 							<input type="text" id="uname" class="form-control" placeholder="Email" name="email" required>
       						<div class="invalid-feedback">Por favor rellena este campo.</div>
 						</div>
 
-						<div class="form-group p-3">
+						<div class="form-group p-1">
 							<label for="pwd">Contraseña:</label>
 							<input type="password" id="pwd" class="form-control" placeholder="Password" name="password" required>
       						<div class="invalid-feedback">Por favor rellena este campo.</div>
 						</div>
-						<div class="p-3" align="center">
-							<button type="submit" value="Enviar" class="btn btn-primary btn-lg btn-block">Enviar</button>	
+						<div class="p-1" align="center">
+							<button type="submit" value="Enviar" class="btn btn-primary btn-lg btn-block">Entrar</button>	
 						</div>
 					</form>
+					<div class="p-1" align="center">
+							<button href="registro.php" class="btn btn-primary btn-lg btn-block">Registrarse</button>	
+						</div>
+
 				</div>
 				<div class="col"></div>
 			</div>

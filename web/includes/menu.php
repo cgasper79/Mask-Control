@@ -1,23 +1,15 @@
 <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand" href="index.php">Mask Control</a>
-    
+    <img class="navbar-brand logo" src="./img/logo.png"/>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-
       <ul class="navbar-nav ml-auto">
-
         <li class="nav-item active">
           <a class="nav-link" data-toggle="modal" data-target="#nueva" href='insertar.php'>+ Añadir</a>
         </li>
-
-        <li class="nav-ite" hidden="">
-          <a class="nav-link" href='./admin/myphp-backup.php'>BackUp</a>
-        </li> 
-
         <li class="nav-item">
            <a class="nav-link" data-toggle="modal" data-target="#sesion">Cerrar Sesión</a>
         </li>

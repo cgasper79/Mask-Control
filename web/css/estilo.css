@@ -5,3 +5,25 @@
 .modal-header{
   background-color: rgb(188, 213, 250);
 }
+
+.logo{
+  width: 20%;
+}
+
+.display-4{
+  margin-top:10px;
+}
+
+a {
+  color:rgb(233, 229, 229);
+}
+
+@media screen and (max-width: 768px) {
+  .logo{
+    width: 40%;
+  }
+
+  .logoFooter{
+    width:70%;
+  }
+}

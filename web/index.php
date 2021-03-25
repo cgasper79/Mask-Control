@@ -18,8 +18,8 @@
     <!-- BOOTSTRAP DATAPICKER-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Font Awesome icons (free version)-->
+   <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     
     <!-- TOASTR NOTIFICATION -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
@@ -185,14 +185,23 @@
 </body>
 
 <!-- Footer -->
-<footer>
+<footer id="footer">
     <div class="container-fluid p-3 my-3 bg-primary text-white text-center shadow-sm">
-        Versión 2.0.1
-        <p>
-            <a class="text-white fa fa-twitter fa-2x" href= 'https://twitter.com/cgasper79'></a> 
-            <a class="text-white fa fa-github fa-2x" href= 'https://github.com/cgasper79/Mask-Control'></a>
-        </p> 
-    </div> 
-</footer>
+      <img class="logoFooter"src="./img/logo.png" alt="Logo"/>
+      <div>
+        <a href="https://twitter.com/cgasper79"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://www.instagram.com/gasperwebdesign"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://github.com/cgasper79"><i class="fab fa-github fa-2x"></i></a>
+        <a href="mailto:cgasconp@protonmail.com" ><i class="fas fa-envelope-square fa-2x"></i></a>
+      </div>
+      <div>
+        &copy; Copyright <strong><span>cgasper79</span></strong>. Mask Control Versión 2.1.0
+      </div>
+      <div class="credits">
+        Designed by <a href="https://gasperwebdesign.com/">Gasperwebdesign</a>
+      </div>
+    </div>
+    
+  </footer><!-- End Footer -->
 
 </html>
