@@ -1,5 +1,5 @@
 <?php 
-    include ('./includes/conexion.php');
+    include ('./conexion.php');
 
     $id = $_POST['id'];
     $wash_max = $_POST['lavadosMax'];

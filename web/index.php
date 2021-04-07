@@ -1,7 +1,9 @@
 <?php 
-    include ('./includes/conexion.php');
+    include ('./conexion.php');
     $email = $_SESSION [ 'email' ];
-    
+    if( !isset( $_SESSION[ "email" ] ) ){
+        header( "Location: ./login.php" );
+    } 
 ?>
 
 <!doctype html>
@@ -40,7 +42,7 @@
     <!-- MENU NAVEGACION -->
     
     <?php
-      require_once ('./includes/menu.php');
+      require_once ('./menu.php');
     ?> 
 
    
@@ -114,8 +116,8 @@
                 </div>
                 <!--Modal Footer-->
                 <div class="modal-footer">
-                    <button type='button' class='btn btn-warning btn-block btn-lg fa fa-refresh ' id="actualizaDatos" data-dismiss="modal"> Actualizar </button>
-                    <button type='button' class='btn btn-danger btn-block btn-lg fa fa-trash ' id="borrarDatos" data-dismiss="modal"> Borrar </button>
+                    <button type='button' class='btn btn-warning btn-block btn-lg' id="actualizaDatos" data-dismiss="modal"> Actualizar </button>
+                    <button type='button' class='btn btn-danger btn-block btn-lg ' id="borrarDatos" data-dismiss="modal"> Borrar </button>
                 </div>
             </div>
         </div>             
@@ -159,7 +161,7 @@
 
                     <!--Modal footer-->
                     <div class="modal-footer">
-                        <button type='button' class='btn btn-success btn-block btn-lg fa fa-plus' data-dismiss="modal" id="guardarNueva"> Insertar </button>
+                        <button type='button' class='btn btn-success btn-block btn-lg' data-dismiss="modal" id="guardarNueva"> Insertar </button>
                     </div>   
                 </div>             
            </div>
@@ -195,7 +197,7 @@
         <a href="mailto:cgasconp@protonmail.com" ><i class="fas fa-envelope-square fa-2x"></i></a>
       </div>
       <div>
-        &copy; Copyright <strong><span>cgasper79</span></strong>. Mask Control Versión 2.1.0
+        &copy; Copyright <strong><span>cgasper79</span></strong>. Mask Control Versión 3.0.0
       </div>
       <div class="credits">
         Designed by <a href="https://gasperwebdesign.com/">Gasperwebdesign</a>

@@ -1,12 +1,14 @@
+
 <?php
 	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 	header("Cache-Control: post-check=0, pre-check=0", false);
 	header("Pragma: no-cache");
 	header('Content-Type: text/html; charset=UTF-8');
+
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<!--Meta requeridos-->
 		<meta charset="utf-8">
@@ -16,9 +18,12 @@
     	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    
     
     	<!-- FAVICON -->
-		<link rel="apple-touch-icon" href="../img/favicon.png" />
-		<link rel="icon" href="../img/favicon.png" type="image/png" />
-    
+		<link rel="apple-touch-icon" href="./img/favicon.png" />
+		<link rel="icon" href="./img/favicon.png" type="image/png" />
+		
+		<!-- CSS PERSONALIZADO -->
+		<link rel="stylesheet" href="./css/estilo.css" >
+
    		 <!--Titulo-->
     	<title>Mask Control</title>
 	</head>
@@ -27,18 +32,20 @@
 		<div class="container pt-5">
 		    <div class="row">
 			    <div class="col"></div>
-				<div class="col-lg-4 border shadow p-3 mb-6 bg-white rounded">
-					<img src="../img/logo.png"/>
-					<h2 align="center">Mask Control</h2>
+				<div class="col-lg-4 col-xs-4 border shadow p-3 mb-6 bg-white rounded">
 					<div align="center">
-      					<img src="../img/favicon.png" id="icon" alt="User Icon" width="25%" height="25%" />
+						<img class="logo" src="./img/logo.png"/>
+						<h2>Mask Control</h2>
+					</div>
+					<div align="center">
+      					<img src="./img/favicon.png" id="icon" alt="User Icon" width="25%" height="25%" />
 					</div>
 					<br>
 					<h2 align="center">LOGIN</h2>
 					<form method="post" action="comprobarLogin.php" class="was-validated">			
 						<div class="form-group p-1">
 							<label for="uname">Usuario:</label>
-							<input type="text" id="uname" class="form-control" placeholder="Email" name="email" required>
+							<input type="email" id="uname" class="form-control" placeholder="Email" name="email" required>
       						<div class="invalid-feedback">Por favor rellena este campo.</div>
 						</div>
 
@@ -52,7 +59,7 @@
 						</div>
 					</form>
 					<div class="p-1" align="center">
-							<button href="registro.php" class="btn btn-primary btn-lg btn-block">Registrarse</button>	
+							<a href="./registro.php"><button class="btn btn-secondary btn-lg btn-block">Registrarse</button></a>	
 						</div>
 
 				</div>

@@ -1,5 +1,5 @@
 <?php 
-    include ('./includes/conexion.php');
+    include ('./conexion.php');
 
     $id = $_POST['id'];
     $descripcion = $_POST ['descripcion'];

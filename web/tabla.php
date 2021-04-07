@@ -1,6 +1,6 @@
 
 <?php 
-    include ('./includes/conexion.php');
+    include ('./conexion.php');
     //Listamos mascarillas del usuario
     $email = $_SESSION [ 'email' ];
     $sql="SELECT * from mascarilla 

@@ -1,25 +1,13 @@
 <?php 
 
-//leemos los datos de la base de datos configurada en VAR de Heroku
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$servername = $url["host"];
-$username = $url["user"];
-$database = substr($url["path"], 1);
-$password = $url["pass"];
 
 
-/*$servername = 'localhost';
-$username = 'cristian';
-$database = 'mask_db';
-$password = 'gascoing1979';
-*/
+include('./config.php');
+
 session_start();
 //definimos tiempo de sesión en 1 hora
 define( 'MAX_SESSION_TIEMPO', 3600 * 1 );
 
-if( !isset( $_SESSION[ "email" ] ) ){
-	header( "Location: ./admin/login.php" );
-} 
 
 // Controla cuando se ha creado la sesión  
 if ( isset( $_SESSION[ 'ULTIMA_ACTIVIDAD' ] ) && 
@@ -33,7 +21,7 @@ if ( isset( $_SESSION[ 'ULTIMA_ACTIVIDAD' ] ) &&
 		);
 	}
 	session_destroy();
-	header( "Location: ./admin/login.php" );
+	header( "Location: ./login.php" );
 }
 
 $_SESSION[ 'ULTIMA_ACTIVIDAD' ] = time();

@@ -1,6 +1,6 @@
 
 <?php 
-    include ('./includes/conexion.php');
+    include ('./conexion.php');
     
     $descripcion = $_POST ['descripcion'];
     $fecha = date_create($_POST ['fechaIni']);

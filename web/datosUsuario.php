@@ -1,5 +1,5 @@
 <?php 
-    include ('./includes/conexion.php');
+    include ('./conexion.php');
     $email = $_SESSION [ 'email' ];
 
     //Sacamos el nombre del usuario 
