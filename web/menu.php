@@ -8,8 +8,13 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" data-toggle="modal" data-target="#nueva" href='insertar.php'>+ Añadir</a>
+          <a class="nav-link" data-toggle="modal" data-target="#nueva">+ Añadir</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#usuario">Perfil</a>
+        </li>
+
         <li class="nav-item">
            <a class="nav-link" data-toggle="modal" data-target="#sesion">Cerrar Sesión</a>
         </li>

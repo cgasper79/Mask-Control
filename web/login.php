@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="./css/estilo.css" >
 
    		 <!--Titulo-->
-    	<title>Mask Control</title>
+    	<title>Mask Control </title>
 	</head>
 
 	<body>
@@ -40,8 +40,7 @@
 					<div align="center">
       					<img src="./img/favicon.png" id="icon" alt="User Icon" width="25%" height="25%" />
 					</div>
-					<br>
-					<h2 align="center">LOGIN</h2>
+					
 					<form method="post" action="comprobarLogin.php" class="was-validated">			
 						<div class="form-group p-1">
 							<label for="uname">Usuario:</label>
@@ -60,7 +59,11 @@
 					</form>
 					<div class="p-1" align="center">
 							<a href="./registro.php"><button class="btn btn-secondary btn-lg btn-block">Registrarse</button></a>	
-						</div>
+					</div>
+
+					<div>
+						<a href="mailto:cgasconp@protonmail.com"><p align="center">- ¿Has olvidado la contraseña? -</p></a>
+					</div>
 
 				</div>
 				<div class="col"></div>

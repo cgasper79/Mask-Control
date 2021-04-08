@@ -60,6 +60,13 @@ function agregarDatos(datos){
   $('#lavados').val(d[5]);
 }
 
+//Función para agregar datos a Modal Edicion Usuario
+function agregarDatosUsuario(datos){
+  d=datos.split('||');
+  $('#idUser').val(d[0]);
+  $('#nameU').val(d[1]);
+  $('#emailU').val(d[2]); 
+}
 
 //Función para controlar los campos numéricos
 function controlNumeros(valor,campo){

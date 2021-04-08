@@ -52,14 +52,17 @@
             <div id="datosUsuario"> 
             </div> 
         </div>
+
+        <br>
+        <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+            <strong>¡Añade tu mascarilla!</strong> Pulsa al botón añadir para registrar una nueva mascarilla.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
 
-    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-        <strong>¡Importante!</strong> Recuerda que para que las mascarillas sean efecivas, se debe controlar el número de lavados.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+    
 
     <!-- TABLA -->
     <div class="container">  
@@ -70,7 +73,13 @@
                     <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
                 </div>
             </div>
-        </div>       
+        </div>   
+        <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+            <strong>¡Tus mascarillas!</strong> Desde este listado puedes visualizar todas tus mascarillas con el número de lavados restantes.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>    
         <div id="tabla">
         </div>
     </div>
@@ -100,7 +109,7 @@
                                 <div class="input-group-append"><span class="input-group-text px-4"><i class="fa fa-calendar"></i></span></div>
                                 <div class="invalid-feedback">Campo obligatorio</div>
                             </div>
-                    </div/>
+                    </div>
 
                     <div class="form-group">
                         <label>Lavados Máximos:</label>
@@ -164,10 +173,45 @@
                         <button type='button' class='btn btn-success btn-block btn-lg' data-dismiss="modal" id="guardarNueva"> Insertar </button>
                     </div>   
                 </div>             
-           </div>
-           
+           </div>       
      </div>
 
+
+    <!--Modal Edicion Usuario-->
+    <div class="modal fade" id="usuario">
+        <div class="modal-dialog was-validated">
+            <div class="modal-content">
+                <!--Modal Header-->
+                <div class="modal-header text-white">
+                    <h4 class="modal-title">Datos Usuarios</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!--Modal Body-->
+                <div class="modal-body">
+                    <input type="text" hidden="" id="idUser" name="" >
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" name="" id="nameU" class="form-control shadow-sm" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" name="" id="emailU" class="form-control shadow-sm" required>
+                        <div class="invalid-feedback">Campo obligatorio</div>
+                    </div>
+
+                    
+                </div>
+                <!--Modal Footer
+                <div class="modal-footer">
+                    <button type='button' class='btn btn-warning btn-block btn-lg' id="actualizaUsuario" data-dismiss="modal"> Actualizar </button>
+                    <button type='button' class='btn btn-danger btn-block btn-lg ' id="borrarUsuario" data-dismiss="modal"> Borrar </button>
+                </div>
+                -->
+            </div>
+        </div>             
+    </div>
    
     <!-- BOOTSTRAP 4, JQUERY BUNDLE INCLUDE POPPER -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>

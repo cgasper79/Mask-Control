@@ -33,7 +33,7 @@
       					<img src="./img/favicon.png" id="icon" alt="User Icon" width="25%" height="25%" />
 					</div>
 					<br>
-					<h2 align="center">REGISTRO</h2>
+					
 					<form method="post" action="comprobarRegistro.php" class="was-validated">			
 						<div class="form-group p-1">
 							<label for="name">Nombre:</label>
@@ -52,7 +52,7 @@
       						<div class="invalid-feedback">Por favor rellena este campo.</div>
 						</div>
 						<div class="p-1" align="center">
-							<button type="submit" value="registrar" class="btn btn-primary btn-lg btn-block">Registrar</button>	
+							<button type="submit" value="registrar" class="btn btn-primary btn-lg btn-block">Registrarme</button>	
 						</div>
 					</form>
 					<div class="p-1" align="center">

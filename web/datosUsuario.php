@@ -8,21 +8,30 @@
 
     //contamos el número de mascarillas usuario
     $sql2="SELECT * from mascarilla
-            WHERE user = '$email'";           
-    
+            WHERE user = '$email'"; 
+            
+           
+    $result = mysqli_query($conexion,$sql);
+    $mostrar = mysqli_fetch_row($result);
+    $datos=$mostrar[0]."||". //id_Usuario                               
+           $mostrar[1]."||". //Nombre Usuario
+           $mostrar[2]."||" //Email
+                  
 ?>
 
 <div class="row">
     <div class="col">
         <br>
-        <h3 class="display-4 ">Mask Control</h3>
+        <h3 class="pt-4 display-6 ">Mask Control</h3>
         <p class="lead">
-            <?php 
-                $result = mysqli_query($conexion,$sql);
-                $mostrar = mysqli_fetch_row($result);
-                echo ($mostrar[1]);
-            ?>
+        
+            <a data-toggle="modal" data-target="#usuario" onclick="agregarDatosUsuario('<?php echo $datos ?>')" class="badge badge-secondary">
+                <?php 
+                    echo ($mostrar[1]); //Nombre Usuario
+                ?>
+            </a>
         </p>
+
         <?php
             $result2 = mysqli_query($conexion,$sql2);
             $numero = mysqli_num_rows($result2);
@@ -31,5 +40,7 @@
         <br>
     </div>
 </div>
+
+
 
 
