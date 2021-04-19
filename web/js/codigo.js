@@ -139,6 +139,17 @@ $(document).ready(function(){
     format: "dd-mm-yyyy"
   });
 
+  //Ventana Modal al iniciar web con temporizado
+  $("#intro").modal("show");
+    setTimeout(function(){
+     $('#intro').modal("hide")
+    },5000);
+
+  //Temporizador alertas
+  setTimeout(function(){
+    $('#importante').fadeOut()
+  },9000);
+
   //cargamos datos usuarios
   $('#datosUsuario').load('datosUsuario.php');
 

@@ -1,9 +1,10 @@
 <?php	
 	include ('./conexion.php');
 
-	$name = $_POST[ "name" ];
-	$email = $_POST[ "email" ];
-	$password = md5( $_POST[ "password" ] );
+	$name = mysqli_real_escape_string($conexion,$_POST[ "name" ]);
+	$email = mysqli_real_escape_string($conexion,$_POST[ "email" ]);
+	$password = mysqli_real_escape_string($conexion,$_POST[ "password" ]);
+	$password_md5 = md5( $password);
 	$sql = "SELECT * FROM usuario WHERE email LIKE '{$email}'";
 	$result = mysqli_query( $conexion, $sql );
 
@@ -18,7 +19,7 @@
 		
 		$sql2 = "INSERT INTO usuario
                 (name, email, password) 
-                VALUES ('$name' , '$email' , '$password' )";
+                VALUES ('$name' , '$email' , '$password_md5' )";
 
         $insertar=mysqli_query($conexion,$sql2);
 		echo 1;

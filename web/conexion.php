@@ -28,6 +28,7 @@ $_SESSION[ 'ULTIMA_ACTIVIDAD' ] = time();
 
 //Creamos conexión con Base de datos
 $conexion=mysqli_connect($servername,$username,$password,$database);
+$conexion->set_charset("utf8");
 
 // Comprobamos conexión
 if (!$conexion) {

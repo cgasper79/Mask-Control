@@ -51,21 +51,40 @@
         <div class="container">
             <div id="datosUsuario"> 
             </div> 
-        </div>
-
+        </div>    
         <br>
-        <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
-            <strong>¡Añade tu mascarilla!</strong> Pulsa al botón añadir para registrar una nueva mascarilla.
+        
+    </div>
+
+    
+    <!-- TABLA -->
+    <div class="container">  
+
+        <!-- Mensajes alertas-->
+        <div id="importante" class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+            <strong>¡Importante!</strong>Las mascarillas reutilizables se deben lavar de manera periódica <a data-toggle="modal" data-target="#lavadoMask" class="alert-link">Leer más</a>.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    </div>
 
-    
+        <!--
+        <div id="instrucciones" class="alert alert-info alert-dismissible fade show text-center" role="alert">
+            <strong>Instrucciones uso App.</strong>Controla el número de lavados en tus mascarillas, ¿quieres saber cómo? <a data-toggle="modal" data-target="#instrucciones" class="alert-link">Leer más</a>.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
 
-    <!-- TABLA -->
-    <div class="container">  
+        <div id="pantallaInicio" class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            <strong>Pon Mask Control en la pantalla inicio de tu Móvil.</strong>¿Quieres saber cómo ponerla en tú movil como una APP? <a data-toggle="modal" data-target="#pantallaInicio" class="alert-link">Leer más</a>.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        -->
+        
         <div class="bg-light p-1 rounded rounded-pill shadow-sm mb-4">
             <div class="input-group">
                 <input class="form-control border-0 bg-light" id="myInput" type="search" placeholder="Buscar..."></input>
@@ -74,14 +93,10 @@
                 </div>
             </div>
         </div>   
-        <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
-            <strong>¡Tus mascarillas!</strong> Desde este listado puedes visualizar todas tus mascarillas con el número de lavados restantes.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>    
+       
         <div id="tabla">
         </div>
+        
     </div>
 
     <!--Modal Edicion-->
@@ -89,7 +104,7 @@
         <div class="modal-dialog was-validated">
             <div class="modal-content">
                 <!--Modal Header-->
-                <div class="modal-header text-white">
+                <div class="modal-header">
                     <h4 class="modal-title">Edición mascarilla</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -139,7 +154,7 @@
             <div class="modal-dialog was-validated">
                 <div class="modal-content">
                     <!--Modal Header-->
-                    <div class="modal-header text-white">
+                    <div class="modal-header">
                         <h2 class="modal-title">Nueva mascarilla</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
@@ -174,7 +189,7 @@
                     </div>   
                 </div>             
            </div>       
-     </div>
+    </div>
 
 
     <!--Modal Edicion Usuario-->
@@ -182,7 +197,7 @@
         <div class="modal-dialog was-validated">
             <div class="modal-content">
                 <!--Modal Header-->
-                <div class="modal-header text-white">
+                <div class="modal-header">
                     <h4 class="modal-title">Datos Usuarios</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -212,6 +227,203 @@
             </div>
         </div>             
     </div>
+
+    <!--Modal Instrucciones uso APP-->
+    <div class="modal fade" id="instrucciones">
+            <div class="modal-dialog">
+                <div class="modal-content">
+  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">¿Cómo uso esta APP?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+  
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>  
+                            El uso de esta App es muy sencillo e intuitivo, solo tienes que seguir los siguientes pasos: 
+                            
+                        </p>
+
+                        <p>
+                            <ol>
+                                <li> Primero tienes que incluir tus mascarillas con los datos requeridos (Nombre, fecha de primer uso y lavados permitidos). Pulsa al botón <strong>- + Añadir </strong> verás que al lado de este botón aparece el número de mascarillas que tienes activas.
+                                    <img class="img-thumbnail" src="img/instrucciones/paso-1.jpg" alt="" /> 
+                                </li>
+
+                                <li> Para editar los datos o eliminar mascarillas, solo tienes que hacer click encima del nombre de la mascarilla y se te abrirá un menú de edición.
+                                    <img class="img-thumbnail" src="img/instrucciones/paso-2.jpg" alt="" /> 
+                                </li>
+
+                                <li> Para incluir un lavado, solo tienes que hacer click encima del botón <strong>lavar</strong> , Verás que al lado de este botón aparece el número de lavados restantes. Utiliza el campo de <strong>Buscar</strong> si necesitas buscar una mascarilla en concreto.
+
+                                    <img class="img-thumbnail" src="img/instrucciones/paso-3.jpg" alt="" /> 
+                                </li>
+
+                            </ol>
+                        </p>
+
+                        
+                            
+                    </div>
+  
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+  
+                 </div>
+            </div>
+        </div>
+
+
+    <!--Modal Recomendaciones Lavado Mascarillas-->
+    <div class="modal fade" id="lavadoMask">
+            <div class="modal-dialog">
+                <div class="modal-content">
+  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">¿Cómo lavar correctamente las mascarillas?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+  
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>  
+                            <img class="img-thumbnail" src="img/lavado/lavado-1.jpg" alt="" />
+                            <br>
+                            El Ministerio de Sanidad publicó en abril de 2020 las formas recomendadas de lavado de mascarillas reutilizables y la norma de mascarillas reutilizables indica que se ha de optar por alguna de estas formas:  
+                        </p>
+
+                        <p>  
+                            <ol>
+                                <li> Lavar con detergente normal y agua a temperatura entre 60 ºC y 90 ºC (ciclo normal de lavado).</li>
+                                <li> Sumergir en una dilución de agua con lejía (dilución 1:50) durante 30 minutos. Después lavar bien con agua y jabón y aclarar para eliminar los restos de lejía.</li>
+                                <li> Usar un viricida autorizado (norma EN 14476). Una vez desinfectadas,las mascarillas deben lavarse con abundante agua y jabón para eliminar restos químicos.</li>
+                            </ol>
+                        </p>
+                            
+                    </div>
+  
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+  
+                </div>
+            </div>
+    </div>
+
+    <!--Modal Intro-->
+    <div class="modal fade" id="intro">
+            <div class="modal-dialog">
+                <div class="modal-content">
+  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Mask Control</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+  
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        
+                        <p>
+                            Con <strong>Mask Control</strong> podrás controlar de manera sencilla el número de lavados restantes de tus mascarillas lavables.
+                        </p>
+                        
+                        <p>      
+                            El uso de esta WebApp es totalmente gratuito y no hago ningún negocio con los datos de registro. Este será el único mensaje de publicidad que recibirás.
+                        </p>
+
+                        <p>
+                           Esta web está diseñada en PHP y hospedada en un servidor propio, puedes consultar este proyecto en mi perfil de <a href="https://github.com/cgasper79/Mask-Control">Github</a>     
+                        </p>
+
+                        <p>
+                            Si estás interesado en diseñar <strong>tu web personal</strong> o para <strong>tu pequeño negocio </strong> puedes <a href="https://gasperwebdesign.com">visitar mi web </a>y hablamos de tu próximo proyecto web.
+                        </p>
+                        <p>
+                        <a href="https://gasperwebdesign.com"> <img class="logo" src="./img/logo.png" alt=""/></a>
+                        </p>
+                            
+                    </div>
+  
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+  
+                </div>
+            </div>
+    </div>                            
+
+
+
+    <!--Modal Poner pantalla inicio móvil-->
+    <div class="modal fade" id="pantallaInicio">
+            <div class="modal-dialog">
+                <div class="modal-content">
+  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">¿Cómo poner esta webApp como una APP en tu móvil?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+  
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>  
+                            <img class="img-thumbnail" src="img/pantalla/pantalla-1.jpeg" alt="" />
+                            <br>
+                            Mask Control es una webApp, ¿que significa esto? pues que no <strong>requiere instalar nada en tu dispositivo móvil</strong>, se ejecuta directamente desde el navegador predeterminado en tu dispositivo. Si quieres poner Mask Control en tu móvil como una APP nativa, sigue estos pasos:   
+                        </p>
+
+                        <h2>
+                            <strong>IOS</strong>
+                        </h2>
+                        <p>  
+                        Con la webApp Mask Control abierta en Safari:
+                            <ol>
+                                <li> Pulsa el botón compartir (el icono central de la barra inferior)</li>
+                                <li> Selecciona <strong>Añadir a la pantalla de inicio</strong></li>
+                                <li> Aparecerá el nombre por defecto de <strong>Mask Control</strong> pero puedes cambiarlo</li>
+                                <li> Pulsa <strong>añadir</strong></li>                                
+                            </ol>
+                        </p>
+                        <h2>
+                            <strong>Android</strong>
+                        </h2>
+
+                        <p>  
+                        Con la webApp Mask Control abierta en Google Chrome:
+                            <ol>
+                                <li> Pulsa el botón de ajustes (los tres puntitos de arriba a la derecha)</li>
+                                <li> Selecciona <strong>Añadir a la pantalla de inicio</strong></li>
+                                <li> Aparecerá el nombre por defecto de <strong>Mask Control</strong> pero puedes cambiarlo</li>
+                                <li> Pulsa <strong>añadir automàticamente</strong></li>                                
+                            </ol>
+                        </p>
+                    </div>
+  
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+  
+                </div>
+            </div>
+    </div>
+    
+    <div align="center" class="container">
+        <div alig="center" class="logoFooter">
+            <a href="https://gasperwebdesign.com"> <img class="logo" src="./img/logo.png" alt=""/>
+            <p>Tu web a medida</p>
+            </a>
+        </div>
+    </div>                        
    
     <!-- BOOTSTRAP 4, JQUERY BUNDLE INCLUDE POPPER -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
@@ -232,8 +444,8 @@
 
 <!-- Footer -->
 <footer id="footer">
-    <div class="container-fluid p-3 my-3 bg-primary text-white text-center shadow-sm">
-      <img class="logoFooter"src="./img/logo.png" alt="Logo"/>
+    <div class="footer container-fluid p-3 my-3 bg-primary text-white text-left shadow-sm">
+      
       <div>
         <a href="https://twitter.com/cgasper79"><i class="fab fa-twitter fa-2x"></i></a>
         <a href="https://www.instagram.com/gasperwebdesign"><i class="fab fa-instagram fa-2x"></i></a>
@@ -241,7 +453,7 @@
         <a href="mailto:cgasconp@protonmail.com" ><i class="fas fa-envelope-square fa-2x"></i></a>
       </div>
       <div>
-        &copy; Copyright <strong><span>cgasper79</span></strong>. Mask Control Versión 3.0.0
+        Mask Control V3.0.2
       </div>
       <div class="credits">
         Designed by <a href="https://gasperwebdesign.com/">Gasperwebdesign</a>

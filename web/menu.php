@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top shadow-sm">
   <div class="container">
-    <img class="navbar-brand logo" src="./img/logo.png"/>
+    
+    <h3>Mask Control</h3>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,11 +11,19 @@
         <li class="nav-item active">
           <a class="nav-link" data-toggle="modal" data-target="#nueva">+ Añadir</a>
         </li>
-
+       
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#usuario">Perfil</a>
+          <a class="nav-link" data-toggle="modal" data-target="#lavadoMask">Recomendaciones</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#instrucciones">Instrucciones</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#pantallaInicio">Acceso directo</a>
+        </li>
+      
         <li class="nav-item">
            <a class="nav-link" data-toggle="modal" data-target="#sesion">Cerrar Sesión</a>
         </li>
@@ -29,7 +38,7 @@
     <div class="modal-content">
 
       <!--Modal Header-->
-      <div class="modal-header text-white">
+      <div class="modal-header">
         <h2 class="modal-title">Cierre sesión</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>

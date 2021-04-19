@@ -9,7 +9,7 @@
     $email = $_SESSION [ 'email' ];
 
     $sql = "SELECT * from mascarilla 
-             WHERE description = '$descripcion' ";
+             WHERE description = '$descripcion' AND user ='$email'";
     $result=mysqli_query($conexion,$sql);
     $repetidos = mysqli_num_rows($result);
 

@@ -8,9 +8,10 @@
     $wash_max = $_POST ['lavadosMax'];
     $wash = $_POST['lavados'];
     $wash_left = $wash_max - $wash;
+    $email = $_SESSION [ 'email' ];
 
     $sql = "SELECT * from mascarilla 
-             WHERE description = '$descripcion' AND NOT id_mask = '$id' ";
+             WHERE description = '$descripcion' AND NOT id_mask = '$id' AND user ='$email' ";
     $result=mysqli_query($conexion,$sql);
     $repetidos = mysqli_num_rows($result);
 
