@@ -39,7 +39,7 @@
 
       <!--Modal Header-->
       <div class="modal-header">
-        <h2 class="modal-title">Cierre sesión</h4>
+        <h3 class="modal-title">Cierre sesión</h3>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 

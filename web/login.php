@@ -40,7 +40,7 @@
 				<div class="col-lg-4 col-xs-4 border shadow p-3 mb-6 bg-white rounded">
 					<div align="center">
 						<img class="logo" src="./img/logo.png"/>
-						<h2>Mask Control</h2>
+						<h3>Mask Control</h3>
 					</div>
 					<div align="center">
       					<img src="./img/favicon.png" id="icon" alt="User Icon" width="25%" height="25%" />

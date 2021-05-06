@@ -105,7 +105,7 @@
             <div class="modal-content">
                 <!--Modal Header-->
                 <div class="modal-header">
-                    <h4 class="modal-title">Edición mascarilla</h4>
+                    <h3 class="modal-title">Edición mascarilla</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <!--Modal Body-->
@@ -155,7 +155,7 @@
                 <div class="modal-content">
                     <!--Modal Header-->
                     <div class="modal-header">
-                        <h2 class="modal-title">Nueva mascarilla</h4>
+                        <h3 class="modal-title">Nueva mascarilla</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
@@ -198,7 +198,7 @@
             <div class="modal-content">
                 <!--Modal Header-->
                 <div class="modal-header">
-                    <h4 class="modal-title">Datos Usuarios</h4>
+                    <h3 class="modal-title">Datos Usuarios</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <!--Modal Body-->
@@ -235,7 +235,7 @@
   
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">¿Cómo uso esta APP?</h4>
+                        <h3 class="modal-title">¿Cómo uso esta APP?</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
   
@@ -285,7 +285,7 @@
   
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">¿Cómo lavar correctamente las mascarillas?</h4>
+                        <h3 class="modal-title">¿Cómo lavar correctamente las mascarillas?</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
   
@@ -323,7 +323,7 @@
   
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Mask Control</h4>
+                        <h3 class="modal-title">Mask Control</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
   
@@ -369,7 +369,7 @@
   
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">¿Cómo poner esta webApp como una APP en tu móvil?</h4>
+                        <h3 class="modal-title">¿Cómo poner esta webApp como una APP en tu móvil?</h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
   
