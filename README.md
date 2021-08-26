@@ -23,7 +23,9 @@ Está preparada para desplegarla en heroku y funcionar con la base de datos Clea
 
 #### Licencia
 
-https://github.com/cgasper79/Mask-Control/blob/main/LICENSE
+Mask-Control tiene licencia [MIT]:https://github.com/cgasper79/Mask-Control/blob/main/LICENSE
+
+Puedes consultar mis diseños web en:
 
 [![Deploy to Heroku][gasperwebdesign-img]][gasperwebdesign-url]
 
