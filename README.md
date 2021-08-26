@@ -18,7 +18,7 @@ Está preparada para desplegarla en heroku y funcionar con la base de datos Clea
 
 ### Variables Heroku
 
-* Solo necesitas esta variable de la base de datos `CLEARDB_DATABASE_URL`
+* Una vez configurado ClearDb desde heroku, se debe verificar que tienes activa esta variables `CLEARDB_DATABASE_URL` con su valor 
 
 
 ### Licencia
