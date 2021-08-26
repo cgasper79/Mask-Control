@@ -3,5 +3,54 @@
   }
 
 .modal-header{
-  background-color: rgb(188, 213, 250);
+  background-color:#007bff;
 }
+
+.logo{
+  width: 30%;
+}
+
+.display-4{
+  margin-top:10px;
+}
+
+a {
+  color:rgb(210, 205, 205);
+  
+}
+
+.navbar{
+  border-radius: 0px 0px 15px 15px;
+ }
+
+.footer{
+  border-radius: 15px 15px 0px 0px;
+}
+
+h3 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+.logoFooter{
+  width: 40%;
+  z-index:20;
+  bottom:8%;
+  right:10px;
+  position:fixed;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(11, 14, 218);
+  border-radius: 15px 15px 15px 15px;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px #000000;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .logo{
+    width: 70%;
+  }
+
+}
+
