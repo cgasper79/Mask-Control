@@ -7,7 +7,7 @@ Puedes utilizarlo en navegador web de un PC o desde tu móvil, es totalmente Res
 
 
 
-#### Instalación en Heroku
+### Instalación en Heroku
 
 [![Deploy to Heroku][heroku-img]][heroku-url]
 
@@ -16,14 +16,16 @@ Puedes utilizarlo en navegador web de un PC o desde tu móvil, es totalmente Res
 
 Está preparada para desplegarla en heroku y funcionar con la base de datos Clear DB que te aporta Heroku. El archivo `mask_db.sql` tiene todo lo necesario para configurar la base de datos, solo tienes que importar ese archivo a Clear DB.
 
-#### Variables Heroku
+### Variables Heroku
 
 * Solo necesitas esta variable de la base de datos `CLEARDB_DATABASE_URL`
 
 
-#### Licencia
+### Licencia
 
-Mask-Control tiene licencia [MIT]:https://github.com/cgasper79/Mask-Control/blob/main/LICENSE
+Mask-Control tiene licencia [MIT][licencia-url]
+
+[licencia-url]:https://github.com/cgasper79/Mask-Control/blob/main/LICENSE
 
 Puedes consultar mis diseños web en:
 
