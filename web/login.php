@@ -6,7 +6,7 @@
 	header('Content-Type: text/html; charset=UTF-8');
 
 	include ('./conexion.php');
-    $email = $_SESSION [ 'email' ];
+    //$email = $_SESSION [ 'email' ];
     if( isset( $_SESSION[ "email" ] ) ){
         header( "Location: ./index.php" );
     } 
